@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* main */
+.mainvisual {
+    width: 100%;
+    height: 55.555vh;
+}
+.mainvisual .visual-wrap, .inner {
+    width: 100%;
+    height: 100%;
+}
+.visual-wrap {text-align: center;}
+.inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner::before, .inner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150%;
+    z-index: -1;
+}
+.inner::before {
+    background: url("../img/img/main-bg.png") no-repeat center / cover;
+}
+.visual-wrap h1 {text-align: center; color: white;}
+
+
+/* section */
+.secInfor {padding: 16rem 0;}
+
+
+@media all and (max-width:915px){
+    .secInfor {padding: 20.8148vh 0;}
+    @media(orientation: Portrait) {
+    
+    }
+    @media(orientation: Landscape) {
+        
+    }
+}
+

@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* .swiper-wrapper:nth-child(1) {
+    background-image: url("../img/img/main_bg1.png");
+}
+.swiper-wrapper:nth-child(2) {
+    background-image: url("../img/img/main_bg2.png");
+}*/
+.slidebg {width: 100%; height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; display: flex;align-items: center; }
+.slidebg1 {background-image: url("../img/img/main_bg1.png"); transform: scale(1.5);}
+.slidebg2 {background-image: url("../img/img/main_bg1.png");}
+.slide-utill {
+    border: 1px solid white;
+}
+.swiper-loading {
+    position: absolute;
+    bottom: 11.5vw;
+    width: 60rem;
+    z-index: 5;
+}
+.swiper-loading .slide_progress {
+    position: relative;
+    width: 100%;
+    height: 0.7rem;
+}
+.swiper-loading .slide_progress::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+.swiper-loading .slide_progress::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--point-color);
+}
+
+/* 태블릿 세로(해상도 768px ~ 1023px) */
+@media all and (max-width:1180px){
+    .swiper-loading .slide_progress {
+        height: .5rem;
+    }
+    /* 세로모드 */
+    @media(orientation: Portrait) {
+        .swiper-loading {
+            width: 67vw;
+            bottom: 44.5vw;
+        }
+        
+    }
+    /* 가로모드 */
+    @media(orientation: Landscape) {
+        .swiper-loading {width: 35vw;}
+        .swiper-loading {bottom: 27.5vh;}
+    }
+}
+
+@media all and (max-width: 915px){
+    .swiper-loading {
+        width: 54vw;
+    }
+    @media(orientation: Portrait) {
+        .swiper-loading {
+            bottom: 35vh;
+        }
+    }
+    /* 가로모드 */
+    @media(orientation: Landscape) {
+        .swiper-loading {
+            bottom: 14vh;
+        }
+    }
+}
+
+
+

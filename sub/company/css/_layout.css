@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/* main */
+.mainvisual {
+    width: 100%;
+    height: 55.555vh;
+}
+.mainvisual .visual-wrap, .inner {
+    width: 100%;
+    height: 100%;
+}
+.visual-wrap {text-align: center;}
+.inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner::before, .inner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150%;
+    z-index: -1;
+}
+.inner::before {
+    background: url("../img/img/main_bg.png") no-repeat center / cover;
+}
+.inner::after {
+    background: rgba(0, 0, 0, 0.46);
+}
+.visual-wrap h1 {text-align: center; color: white;}
+
+/* section */
+.intro, .promise {padding: 0 0 13.4259vh;}
+.intro {padding-top: 26.8518vh;}
+.sec-title {margin-bottom: 9.7222vh;}
+.titleTxt h2 {
+    position: relative;
+    margin-bottom: 4rem;
+}
+.titleTxt h2::before {
+    content: 'Invest in People';
+    position: absolute;
+    top: -60%;
+    left: 0;
+
+}
+.contentTxt .content {width: 40%;}
+
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    gap: 21.7592vh;
+}
+.intro .contentBox .item {
+    display: flex;
+    gap: 5.572916vw;
+    align-items: center;
+}
+.contentBox .item2 {flex-direction: row-reverse;}
+
+.contentBox .item .img-wrap , .contentBox .item .content-wrap{
+    flex:1;
+}
+.contentBox .item .img-wrap .img {
+    position: relative;
+}
+.contentBox .item .img-wrap .img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    top: -5%;
+    background: var(--content-color);
+    z-index: -1;
+}
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.222vh;
+    
+}
+.content-wrap .content {width: 95%;}
+
+/* promise */
+.promise {padding-top: 13.4259vh;}
+.promise .sec-title {text-align: center;}
+.promise .contentBox ul {display: flex; flex-direction: row; justify-content: space-between; gap:2.4rem;}
+.promise .contentBox ul li.item {
+    flex: 1;
+    padding: 3rem 0;
+    height: 48.6rem; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 1.2037vh;
+}
+.promise .contentBox ul li.item .icon-wrap {width: 100%; margin-bottom: 2rem;}
+.promise .contentBox ul li.item .icon-wrap .icon {position: relative; width: 100%; height: 22.8rem;}
+.promise .contentBox ul li.item .icon-wrap .icon::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.promise .contentBox ul li.item .descr-wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 6.111vh;
+}
+
+/* 태블릿 세로(해상도 768px ~ 1023px) */
+@media all and (max-width:1180px){
+    .intro {padding-top: 13.4259vh;}
+    .titleTxt h2::before  {top: -20%;}
+    .contentTxt .content {width: 88%;}
+    .intro .contentBox .item {
+        flex-direction: column;
+    }
+    .intro .contentBox .item img {width: 100%;}
+    .promise .contentBox ul {flex-direction: column;}
+    .promise .contentBox ul li.item {flex-direction: row; padding: 3rem 2rem;}
+    .promise .contentBox ul li.item .descr-wrap {width: 100%; gap: 4.58984375vh;}
+
+
+    @media(orientation: Portrait) {
+        
+    }
+    @media(orientation: Landscape) {
+        .intro .contentBox .item {align-items: flex-start;}
+        .content-wrap .content {width: 78%;}
+        .intro .contentBox .item2 {align-self: flex-end;}
+    }
+}
+
+ /* 모바일 가로, 모바일 세로 */
+@media all and (max-width: 915px){
+    .promise .contentBox ul li.item .icon-wrap .icon {height: 12.8rem;}
+    .intro .contentBox .item {align-items: flex-start;}
+    @media(orientation: Portrait) {
+        .promise .contentBox ul li.item .icon-wrap {gap: 0;}
+        .promise .contentBox ul li.item .descr-wrap {
+            gap: 1rem;
+        }
+        
+    }
+    @media(orientation: Landscape) {
+        .intro .contentBox .item {flex-direction: row;}
+        .sec-title {margin-bottom: 25.7222vh}
+        .promise .contentBox ul li.item {height: auto; flex-direction: row;}
+        .promise .contentBox ul {flex-direction: row;}
+        img {width: 100%;}
+        
+    }
+}

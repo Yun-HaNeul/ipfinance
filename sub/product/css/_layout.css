@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* main */
+.mainvisual {
+    width: 100%;
+    height: 55.555vh;
+}
+.mainvisual .visual-wrap, .inner {
+    width: 100%;
+    height: 100%;
+}
+.visual-wrap {text-align: center;}
+.inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner::before, .inner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150%;
+    z-index: -1;
+}
+.inner::before {
+    background: url("../img/img/main-bg.png") no-repeat center / cover;
+}
+.inner::after {
+    background: rgba(0, 0, 0, 0.46);
+}
+.visual-wrap h1 {text-align: center; color: white;}
+
+
+
+/* section */
+.product {
+    padding: 14.8148vh 0;
+}
+.product .sec-title {text-align: center;}
+.product .product1 .titleBox {display: flex; gap: 9.5rem; align-items: center;}
+.product .product1 .contentBox > ul {display: flex; justify-content: center; gap: 11rem; align-items: center;}
+.product .product1 .contentBox > ul li.product-item {width: 28.4375vw; height: 53.1481vh; gap: 5.72916vw; display: flex; align-items: center; padding-left:2.1875vw;}
+
+.product .product1 .contentBox > ul li.product-item .content > ul {display: flex; flex-direction: column;}
+
+.product .product1 .contentBox > ul li.product-item .content > ul li {display: flex; gap: 2.760416vw; align-items: center;}
+.desc-list {margin-bottom: 2.2rem;}
+.desc-list .name {width: 8.8rem; height:4.2rem; display: flex; justify-content: center; align-items: center;}
+
+/* service */
+.service {text-align: center; padding: 0 0 14.8148vh;}
+.service .contentBox {display: flex; justify-content: center; align-items: center; gap: 6.4rem;}
+.service .contentBox .box {position: relative; width: 29.479166vw; height: 14rem;}
+.service .contentBox .box1 {z-index: 4;}
+.service .contentBox .box2::before {
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8.125vw;
+    height: 5.3rem;
+    background: url("../img/icon/arrow.svg") no-repeat center / cover;
+}
+
+/* progress */
+.progress {padding: 14.8148vh 0; background: #f0f0f0;}
+.progress .contentBox > ul {display: flex; flex-wrap: wrap; justify-content: center; gap: 6.6rem;}
+.progress .contentBox > ul li {position: relative; width: 29%;  height: 45rem; border: 1px solid var(--sub-color2); display: flex; align-items: center; justify-content: center; text-align: center;}
+
+
+/* 태블릿 세로(해상도 768px ~ 1023px) */
+@media all and (max-width:1180px){
+    .progress .contentBox > ul {
+        justify-content: flex-start;
+    }
+    .progress .contentBox > ul li {
+        width: 44%;
+    }
+    .service .contentBox {flex-direction: column;}
+        .service .contentBox .box {width: 100%;}
+        .service .contentBox .box2::before {transform: translateX(-50%) rotate(90deg); top: -50%; left: 50%; }
+        .service .contentBox .box2::before {width: 15.5rem;}
+    @media(orientation: Portrait) {
+        .product .product1 .titleBox {flex-direction: column; gap: 2rem;}
+        .product .product1 .contentBox > ul {justify-content: space-between; gap: 0; flex-wrap: wrap; }
+        .product .product1 .contentBox > ul li.product-item {width: 100%; padding-left: 11.4583vw; margin-bottom: 5rem;}
+        
+    }
+        @media(orientation: Landscape) {
+            .product .product1 .contentBox > ul li.product-item {height: 70.1481vh;}
+            .product .product1 .contentBox > ul {gap: 5rem;}
+            .product .product1 .contentBox > ul li.product-item {width: 50%;}
+            
+    }
+}
+
+ /* 모바일 가로, 모바일 세로 */
+@media all and (max-width: 915px){
+    .product .product1 .contentBox > ul li.product-item {padding-left: 7.4583vw;}
+    .progress .contentBox > ul li {width: 100%; height: 26rem;}
+    .progress .contentBox > ul li img {width: 80%;}
+    @media(orientation: Portrait) {
+        
+        
+    }
+        @media(orientation: Landscape) {
+            .service {padding: 0 0 20.8148vh;}
+            .product {padding: 20.8148vh 0;}
+            .product .product1 .contentBox > ul {gap: 3rem}
+            .product .product1 .contentBox > ul li.product-item {padding-left: 2.4583vw;}
+            .desc-list {margin-bottom: 1.2rem;}
+            
+    }
+}
+    
+

@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(_font.css);
+@import url(_button.css);
+
+@import url(_layout.css);
+@import url(_common.css);
+@import url(_slide.css);
+
+@import url(_animation.css);
+
+
+/* :root {
+    --main-color: #222222;
+    --sub-color1: #B1B1B1;
+    --sub-color2: #6B6B6B;
+    --content-color: #CFCFCF;
+    --point-color: #B99E76;
+    --title-color: #fff;
+    font-size: 10px;
+} */
+/* custom */
+.txt_box .tit {
+    font: 2.60416vw "Open Sans";
+    font-weight: 600;
+    color: white;
+}
+.txt_box .txt {
+    display: block;
+    margin: 2.91666vh 0 3.4375vw;
+    font: 500 3.64583vw "Noto Sans KR";;
+    color: white;
+}
+.txt_box .txt_b {
+    font-style: normal;
+    font-weight: 800;
+}
+
+/* section */
+    /* secIs */
+    .secIs .content {
+        width: 43%;
+        margin-bottom: 3.125vh;
+    }
+    /* secIn */
+    .secIn .contBox .initem {box-shadow: 1px 1px 10px rgba(0,0,0,.1);}
+    .secIn .contBox .initem span {color: white;}
+    .secIn .contBox .initem1 span {color: var(--main-color)}
+    .secIn .contBox .initem1 {background: rgba(255, 255, 255, 0.9);}
+    .secIn .contBox .initem2 {background: rgba(129, 129, 129, 0.9);}
+    .secIn .contBox .initem3 {background: rgba(34, 34, 34, 0.9);}
+
+    /* secWith */
+    .loan-link .link-img {
+        background-image: url("../img/img/sec3_bg1.png");
+    }
+    .invest-link .link-img {
+        background-image: url("../img/img/sec3_bg2.png");
+    }
+    
+    .secWith .link-area::before {content: ''; position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,.75); opacity: 0; transition: 0.35s;}
+    .secWith .link-area:hover::before {opacity: 1;}
+    .secWith .link-cont h4 {font-size: 2.60416vw; font-weight: 600; color: white; margin-bottom: 2.7777vh;}
+    .secWith .link-cont .arrow {position: relative; display: block; width: 100%; height: 0.87962vh; transition: 0.35s; }
+    .secWith .link-cont .arrow::after {content: url("../img/icon/arrow.svg"); position: absolute; width: 100%; height: 100%; transition: 0.35s;}
+    .secWith .link-area:hover .arrow {transform: translateX(10%);}
+    .secWith .link-area:hover .arrow::after {content: url("../img/icon/arrow_h.svg");}
+    
+
+
+
+
+
+
+    /* 태블릿 가로, 태블릿 세로 */
+    @media all and (max-width:1180px){
+        .secIs .content {
+            width: 80%;
+            margin-bottom: 3vw;
+        }
+        
+        .secWith .sectionTitle {width: 75%;}
+
+        @media(orientation: Portrait) {
+            .nav_visual .nav_visual-wrap {
+                max-width: 21.6rem;
+                padding: 0;
+            }
+            .secIn .contBox {gap:2rem;}
+            
+            
+            .secWith .link-cont h4 {font-size: 6.09756vw;}
+        }
+        /* 태블릿 가로 */
+        @media(orientation: Landscape) {
+            .txt_box .tit {font-size: 3.5vw;}
+            .txt_box .txt {font-size: 4.5vw;}
+            .txt_box .txt_b {font-size: 4.5vw;}
+            
+            .secIs .content {width: 48%;}
+            
+            .secWith .link-cont h4 {font-size: 4vw;}
+
+            .secWith .loan-link .link-cont {
+                left: 5.5vw;
+            }
+            .secWith .invest-link .link-cont {
+                right: 5.5vw;
+            }
+        }
+    }
+
+    
+    
+    /* 모바일 가로, 모바일 세로 */
+@media all and (max-width: 915px){
+    
+    .txt_box .tit {
+        font-size: 5.5vw;
+    }
+    .txt_box .txt {
+        margin: 3rem 0 4rem;
+        font-size: 6.5vw;
+    }
+    .txt_box .txt_b {font-size: 6.5vw;}
+    
+    .foot-left h4 {font-size: 1.5rem;}
+    @media(orientation: Portrait) {
+        .secIs .content {
+            width: 100%;
+            font-size: 1.2rem;
+            margin-bottom: 8vw;
+        }
+        .secContac .titBox h2 {font-size: 5.5vw;}
+        .secContac .contBox h3 {font-size: 6vw;}
+        
+        /* footer */
+        
+        .topWrap {width: 5.8rem; height: 5.8rem;}
+    }
+    /* 가로모드 */
+    @media(orientation: Landscape) {
+        section {
+            padding: 9.28vw 0;
+        }
+        .txt_box .txt {
+            margin: 0.5rem 0 2rem;
+        }
+        .secIs .content {
+            width: 100%;
+        }
+        .secWith .link-cont h4 {
+            font-size: 3vw;
+        }
+        .secWith .invest-link .link-cont {
+            right: 8.5vw;
+        }
+    }
+}

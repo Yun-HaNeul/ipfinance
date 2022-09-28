@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import url(../../../../css/reset.css);
+@import url(../../../..//css/_font.css);
+@import url(../../../../css/_button.css);
+@import url(../../../../css/_common.css);
+@import url(../../../../css/_animation.css);
+
+
+@import url(_layout.css);
+
+/* header */
+#header {color: white;}
+
+/* main */
+.visual .txt-area h1 {
+    font-size: 10.4167vw; 
+    color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur( 2px );
+    text-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur( 4px);
+}
+
+/* login */
+.login {background: var(--main-color);}
+.login .sectionTitle {font-family: 'Open Sans'; color: white; font-weight: 800;}
+.login .login-area label {font-size: 1.5rem; font-weight: 700; color: var(--sub-color2); transition: 0.35s linear;}
+.login .login-area .input {
+    width: 100%; height: 4.7rem;
+    background: transparent;
+    margin-bottom: 2.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--sub-color2);
+    font-size: 1.8rem;
+    color: white;
+}
+.login .id-wrap, .login .pw-wrap {position: relative;}
+.login .id-wrap::before, .login .pw-wrap::before {
+    content: '';
+    position: absolute;
+    bottom: 2.5rem;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--point-color);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: 0.35s linear;
+}
+.login .id-wrap.active label, .login .pw-wrap.active label {color: var(--point-color)};
+.login .id-wrap.active::before, .login .pw-wrap.active::before {
+    transform: scaleX(1);
+}
+.login-btn { width: 100%; height: 4.7rem; font-size: 1.8rem; background: var(--point-color); border-radius: 10px; margin-top: 7.2rem; transition: 0.35s ease-in; border: none; cursor: pointer;}
+.login-btn:hover {opacity: 0.7;}
+
+
+@media all and (max-width:1180px){
+    .login {background: transparent;}
+    .login-area {background: var(--main-color); padding: 5.989583vw 9.62962vh;}
+    .visual .txt-area h1 {display: none;}
+    @media(orientation: Portrait) {
+
+    }
+    @media(orientation: Landscape) {
+
+    }
+}
+
+@media all and (max-width:915px){
+    
+    @media(orientation: Portrait) {
+        .login-btn {margin-top: 3.298vh;}
+        .login-area {padding: 5.989583vw 5.62962vh;}
+    }
+    @media(orientation: Landscape) {
+        .login .login-area {background: transparent;}
+        .login .login-area .input {height: 10vh; margin-bottom: 8.9285vh;}
+        .login .login-area label {font-size: 1rem;}
+        .login-btn {height: 3.6rem; margin-top: 0; font-size: 1.1rem;}
+    }
+}

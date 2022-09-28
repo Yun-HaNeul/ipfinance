@@ -1,0 +1,39 @@
+
+.more a {
+    width: 8.64583vw;
+    padding: 0.625vw 0;
+    text-align: center;
+    font-size: 0.9375vw;
+    color: var(--point-color);
+    border: 1px solid var(--point-color);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.more:hover a {
+    background: var(--point-color);
+    color: white;
+}
+/* 모바일 */
+@media all and (max-width: 915px){
+    
+    @media(orientation: Portrait) {
+        .more a {
+            width: 100%;
+            font-size: 3.9285vw;
+            padding: 2.625vw 0;
+            
+        }
+        .secIn .contBox .initem {
+            height: 19.0703vh;
+            border-radius: 15.927083vw;
+        }
+        
+    }
+    /* 가로모드 */
+    @media(orientation: Landscape) {
+        .more a {
+            width: 90%;
+            font-size: 1.3rem;
+            padding: 0.5rem 0;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+
+
+/* main */
+.mainvisual {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.visual-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.mainvisual::before {
+    content: '';
+    position: absolute;
+    width: 36.4583vw;
+    height: 81.94vh;
+    background: var(--main-color);
+}
+.visualslide {
+    position: relative;
+    width: 88.64583vw;
+    height: 88.888vh;
+}
+.swiper {
+    margin-left: unset;
+    margin-right: unset;
+}
+.swiper-wrapper {
+    position: relative;
+}
+.swiper-slide::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 9, 9, 0.4);
+    z-index: -1;
+}
+.secvisual {
+    width: 100%;
+}
+/* section */
+section {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+/* secIs */
+.secIs {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+.secIs::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 3.125%;
+    transform: translateY(-50%);
+    width: 62.5vw;
+    height: 68.5185vh;
+    background: url("../img/img/sec1_bg.png") no-repeat center / cover;
+}
+.sec-wrap {
+    position: relative;
+    display: flex;
+}
+.img-wrap {
+    display: none;
+}
+
+/* secIn */
+.secIn {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.secIn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("../img/img/sec2_bg.png") no-repeat center / cover;
+}
+.secIn .sec-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15.7407vh;
+}
+.secIn .contBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secIn .contBox .initem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24.47916vw;
+    height: 23.51851vh;
+    text-align: center;
+    border-radius: 6.77083vw;
+
+}
+.secIn .contBox .initem2 {margin: 0 -5%;}
+.secIn .contBox .initem span.content {width: 57%;}
+
+/* secWith */
+.secWith { align-items: center; padding: 9.2592vh 0;}
+.secWith .sec-wrap {gap: 2.5vw; justify-content: space-between;}
+.secWith .link-wrap {
+    height: 49.4444vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6.48148vh 0;
+}
+.secWith .link-area {
+    position: relative;
+    width: 15.9375vw;
+    height: 42.9629vh;
+    cursor: pointer;
+}
+.secWith .link-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.loan-link {align-self: flex-end;}
+.invest-link {align-self: flex-start;}
+
+.secWith .link-cont {
+    position: absolute;
+    bottom: 3.28703vh;
+}
+.secWith .loan-link .link-cont {
+    left: 1.77083vw;
+}
+.secWith .invest-link .link-cont {
+    right: 1.77083vw;
+}
+
+
+/* 태블릿 세로(해상도 768px ~ 1023px) */
+@media all and (max-width:1180px){
+    .mainvisual::before {
+        display: none;
+    }
+    .visual-wrap {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .visualslide {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    /* section */
+    .secIs::before {
+        display: none;
+    }
+    .sec-wrap {
+        flex-direction: column;
+    }
+    .img-wrap {
+        display: block;
+        margin-bottom: 10rem;
+    }
+    .img-wrap div {
+        width: 100%;
+        height: 35vh;
+        background: url("../img/img/sec1_bg.png") no-repeat center/ cover;
+    }
+
+    /* secIn */
+    .secIn .contBox {flex-direction: column;}
+    .secIn .contBox .initem {
+        width: 53.7760416vw;
+        height: 21.0703vh;
+        border-radius: 16.927083vw;
+    }
+    .secIn .contBox .initem span.content {width: 63%;}
+    .secIn .sec-wrap {gap: 7.1835vh;}
+
+    /* secWith */
+    .secWith .link-area {width: 100%;}
+
+
+    /* footer */
+    .foot-wrap {flex-direction: column; align-items: flex-start; gap: 1rem;}
+    @media(orientation: Portrait) {
+        .nav_visual .nav_visual-wrap {
+            max-width: 21.6rem;
+            padding: 0;
+        }
+        .secIn .contBox {gap:2rem;}
+        
+        .secWith .loan-link .link-cont {
+            left: 4.8780vw;
+        }
+        .secWith .invest-link .link-cont {
+            right: 4.8780vw;
+        }
+        
+    }
+    /* 가로모드 */
+    @media(orientation: Landscape) {
+        section {
+            padding: 6.8292vh 0;
+        }
+        .secIs {
+            height: 100vh;
+        }
+        .img-wrap {
+            margin-bottom: 4vh;
+        }
+        .img-wrap div {
+            height: 40vh;
+        }
+        .secIn .contBox .initem {width: 31.776042vw;}
+        
+        /* secWith */
+        .secWith .link-cont {bottom: 10vh;}
+    }
+}
+
+    /* 모바일 가로, 모바일 세로 */
+    @media all and (max-width: 915px){
+        
+    
+        @media(orientation: Portrait) {
+            .img-wrap {
+                display: block;
+                margin-bottom: 8.4226vw;
+            }
+            .secIn .contBox .initem {
+                width: 74.78125vw;
+                height: 16.0703vh;
+                border-radius: 6rem;
+            }
+            /* secWith */
+            .secWith .link-wrap {
+                flex-direction: column; 
+                height: 65.4444vh;
+                gap: 2rem;
+            }
+            .secWith .invest-link .link-cont {
+                right: 17.878vw;
+            }
+            .secWith .loan-link .link-cont {
+                left: 10.878vw;
+            }
+            .secWith .link-cont {bottom: 5.28703vh;}
+            
+        }
+        /* 가로모드 */
+        @media(orientation: Landscape) {
+            .sec-wrap {
+                flex-direction: row;
+                gap: 6vw;
+            }
+            .img-wrap {
+                width: 100%;
+            }
+            .secIn .contBox {
+                flex-direction: row;
+            }
+            .secIn .contBox .initem {
+                height: 30.0703vh;
+                border-radius: 9rem;
+            }
+            /* secWith */
+            .secWith .link-wrap {
+                width: 100%;
+            }
+            
+        }
+    }
+    
+

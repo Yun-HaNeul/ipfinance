@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import url(../../../css/reset.css);
+@import url(../../../css/_font.css);
+@import url(../../../css/_button.css);
+@import url(../../../css/_common.css);
+@import url(../../../css/_animation.css);
+
+@import url(_layout.css);
+
+/* header */
+#header {color: white;}
+
+
+/* main */
+.titleTxt h2 {
+    font-weight: 500;
+    font-size: 3.125vw;
+    line-height: 1.5;
+}
+.titleTxt h2::before {
+    font: 600 7.8125vw 'Noto Sans';
+    color: rgba(34, 34, 34, 0.1);
+}
+/* promise */
+.promise {background: #eaeaea;}
+.promise .contentBox ul li.item {background: white;}
+.promise .contentBox ul li.item .icon-wrap .icon1::before {
+    background-image: url("../img/icon/promise-icon1.svg");
+}
+.promise .contentBox ul li.item .icon-wrap .icon2::before {
+    background-image: url("../img/icon/promise-icon2.svg");
+}
+.promise .contentBox ul li.item .icon-wrap .icon3::before {
+    background-image: url("../img/icon/promise-icon3.svg");
+}
+.promise .contentBox ul li.item .descr-wrap h5 {
+    font-size: 1.302083vw;
+    font-weight: 600;
+}
+
+/* 태블릿 세로(해상도 768px ~ 1023px) */
+@media all and (max-width:1180px){
+    .titleTxt h2 {font-size: 7.8125vw;}
+    .titleTxt h2::before {font-size: 7.8125vw;}
+    
+
+    @media(orientation: Portrait) {
+        .promise .contentBox ul li.item .descr-wrap h5 {font-size: 3.2552083vw;}
+        
+    }
+    @media(orientation: Landscape) {
+        .promise .contentBox ul li.item .descr-wrap h5 {font-size: 2.8vw;}
+    }
+}
+
+ /* 모바일 가로, 모바일 세로 */
+@media all and (max-width: 915px){
+    .promise .contentBox ul li.item {flex-direction: column;}
+}

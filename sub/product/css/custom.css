@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import url(../../../css/reset.css);
+@import url(../../../css/_font.css);
+@import url(../../../css/_button.css);
+@import url(../../../css/_common.css);
+@import url(../../../css/_animation.css);
+
+@import url(_layout.css);
+
+body {counter-reset: step;}
+/* header */
+#header {color: white;}
+
+/* main */
+.titleTxt h2 {
+    font-weight: 500;
+    font-size: 3.125vw;
+    line-height: 1.5;
+}
+.titleTxt h2::before {
+    font: 600 7.8125vw 'Noto Sans';
+    color: rgba(34, 34, 34, 0.1);
+}
+/* section */
+.sec-title {text-align: center; margin-bottom: 11rem;}
+/* product */
+.sec-title p {font-size: 1.302083vw; margin-top: 2rem;}
+.product .product1 .titleBox {margin-bottom: 6.6rem;}
+.product .product1 .titleBox h3 {font-size: 5rem; font-weight: 500;}
+.product .product1 .contentBox > ul li.product-item {transition: 0.35s; border-radius: 10px;}
+.product .product1 .contentBox > ul li.product-item:hover {background: var(--main-color); transform: scale(1.1);}
+.product .product1 .contentBox > ul li.product-item .tit {margin-bottom: 6.6666vh;}
+.product .product1 .contentBox > ul li.product-item:hover .tit {color: white;}
+.product .product1 .contentBox > ul li.product-item:hover .tit .content {color: var(--sub-color1);}
+.product .product1 .contentBox > ul li.product-item .tit h4 {font-size: 2.08333vw; font-weight: 500;}
+.desc-list .name {background: var(--point-color); color: white; font-weight: 300; border-radius: 10px;}
+.desc-list .name h5 {font-size: 1.8rem; font-weight: 500;}
+.desc-list .desc .desc-txt {font-size: 1.8rem;}
+.product .product1 .contentBox > ul li.product-item:hover .desc-list .desc .desc-txt {color: var(--sub-color1)}
+
+
+/* service */
+.service .sec-title h2 {font-size: 1.458333vw; font-weight: 500; margin-bottom: 6.6rem;}
+.service .contentBox .box {background: #f0f0f0; border-radius: 10px; display: flex; align-items: center; justify-content: center;}
+.service .contentBox .box p {font-size: 1.04166vw; color: var(--sub-color2)}
+
+/* progress */
+
+.progress .contentBox > ul li:after {
+    content: '';
+    position: absolute;
+    right: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.8rem;
+    height: 2.4rem;
+    background: url("../img/icon/progress-arrow.svg") no-repeat center / cover;
+}
+.progress .contentBox > ul li:nth-child(3n):after {display: none;}
+.progress .contentBox > ul li:nth-child(1) {position: relative; background: var(--main-color);}
+.progress .contentBox > ul li:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 100%;
+    height: 100%;
+    background: var(--point-color);
+    z-index: -1;
+}
+.progress .contentBox > ul li .step {position: relative; font-size: 1.5rem; font-weight: 500; margin: 3rem 0 .7rem;}
+.progress .contentBox > ul li .step::after {
+    counter-increment: step;
+    content: counter(step);
+}
+.progress .contentBox > ul li .txt h5 {font-size: 2rem; font-weight: 500;}
+.progress .contentBox > ul li .progress-item  h4.progress-title {font-size: 2rem; font-weight: 500; color: white; margin-bottom: 1.6rem;}
+.progress .contentBox > ul li .progress-item  strong {font-size: 3rem; font-weight: 600; color: white}
+
+.progress-notice {margin-top: 13.3rem;}
+.progress-notice ol {list-style: disc; margin-left: 15px; line-height: 2;}
+.progress-notice ol li strong {font-size: 1.8rem; font-weight: lighter;}
+
+
+/* 태블릿 세로(해상도 768px ~ 1023px) */
+@media all and (max-width:1180px){
+    
+    
+    
+    .service .sec-title h2 {font-size: 2.8rem;}
+    .service .contentBox .box p {font-size: 2rem;}
+    .progress .contentBox > ul li:nth-child(3n):after {display: block;}
+    .progress .contentBox > ul li:nth-child(2n):after {display: none;}
+    @media(orientation: Portrait) {
+        .product .product1 .contentBox > ul li.product-item .tit h4 {font-size: 5.20833vw;}
+        .product .product1 .titleBox {flex-direction: column; gap: 2rem;}
+        .product .product1 .titleBox h3 {font-size: 6.510416vw;}
+        .sec-title p {font-size: 2.60416vw;}
+    }
+    @media(orientation: Landscape) {
+        .sec-title {margin-bottom: 7rem;}
+        .sec-title p {font-size: 1.60416vw;}
+        .product .product1 .titleBox h3 {font-size: 4.510416vw;}
+        .product .product1 .contentBox > ul li.product-item .tit h4 {font-size: 3rem;}
+        .desc-list .name h5 {font-size: 1.5rem;}
+        .desc-list .desc .desc-txt {font-size: 1.3rem;}
+    }
+}
+
+ /* 모바일 가로, 모바일 세로 */
+@media all and (max-width: 915px){
+    .desc-list .name {width: 4.3rem; height: 2.2rem;}
+    .desc-list .name h5 {font-size: 1rem;}
+    .desc-list .desc .desc-txt {font-size: 1.1rem;}
+    .service .sec-title h2 {font-size: 1.8rem;}
+    .service .contentBox .box p {font-size: 1.5rem;}
+    .progress-notice ol li strong {font-size: 1.3rem;}
+    .progress .contentBox > ul li .step {margin-top: 1rem;}
+    .progress .contentBox > ul li:after {transform: translateX(-50%) rotate(90deg); left: 50%; top: unset; bottom: -5rem;}
+    .progress .contentBox > ul li:nth-child(2n):after {display: block;}
+    .progress .contentBox > ul li:last-child:after {display: none;}
+    @media(orientation: Portrait) {
+        
+    }
+    @media(orientation: Landscape) {
+        .product .product1 .contentBox > ul li.product-item .tit h4 {font-size: 1.8rem;}
+        .product .product1 .contentBox > ul li.product-item .tit {margin-bottom: 1rem;}
+        .product .product1 .contentBox > ul li.product-item {height: 83.1481vh;}
+            
+    }
+}

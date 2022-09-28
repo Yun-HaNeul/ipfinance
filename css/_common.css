@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+html,body {
+    width: auto;
+    font-size: 10px;
+    color: var(--main-color);
+    font-family: "Noto Sans KR";
+}
+#wrap {overflow: hidden;}
+body {overflow-x: hidden;}
+p, span, h1, h2, h3, h4, h5, h6 {word-break: keep-all;}
+:root {
+    --main-color: #222222;
+    --sub-color1: #B1B1B1;
+    --sub-color2: #6B6B6B;
+    --content-color: #CFCFCF;
+    --point-color: #B99E76;
+    --title-color: #fff;
+    font-size: 10px;
+}
+/* typography System */
+.title {font: 800 1.5625vw "Noto Sans"; letter-spacing: 4px;     margin-bottom: 2.7777vh;}
+.sectionTitle {font-weight: 500; font-size: 2.864583vw;     margin-bottom: 2.7777vh;}
+.content {font-size: 1.04166vw; color: #787878}
+.footerText { font-weight: 300;font-size: 0.78125vw; letter-spacing: 11.5%; color: var(--sub-color1);}
+.secsubTitle {font-weight: 600; font-size: 3.125vw; line-height: 2;}
+.secsubsubTitle {font-weight: 600px; font-size: 1.875vw;}
+.pointC {color: var(--point-color)}
+.mainC {color: var(--main-color)}
+.subC {color: var(--sub-color1)}
+.sub2C {color: var(--sub-color2)}
+
+/* effect */
+.box-shadow {box-shadow: 7px 7px 21px rgba(0, 0, 0, 0.25);}
+/* header */
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 2.5rem 3.125%;
+}
+#header .headInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .headInner .logo {
+    width: 7.5rem;
+    height: 5.1rem;
+    text-indent: -9999rem;
+}
+#header .headInner .logo a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("../img/common/logo.svg") no-repeat center / cover;
+}
+#header .nav_pc {
+    display: block;
+}
+#header .nav_pc nav ul {
+    display: flex;
+    gap: 9rem;
+}
+#header .nav_pc nav ul li a {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#header .nav_pc nav ul li a span {
+    position: relative;
+}
+#header .nav_pc nav ul li a span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background: var(--point-color);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#header .nav_pc nav ul li a:hover {
+    color: var(--point-color);
+}
+#header .nav_pc nav ul li a:hover span::before{
+    transform: scaleX(1);
+}
+
+#header .nav_other {
+    display: none;
+}
+#header .nav_other .hamburgerWrap {
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+}
+#header .nav_other .hamburgerWrap .burger {
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: white;
+    transition: 0.35s ease-in;
+}
+#header .nav_other .hamburgerWrap .burger2 {
+    margin-left: -.8rem;
+}
+.nav_visual {
+    position: absolute;
+    left: 105%;    
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    transition: 0.35s;
+    z-index: -1;
+}
+.nav_visual::before {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 50vw;
+    height: 30vw;
+    background: url("../img/common/nav_bg.svg") no-repeat center / cover;
+
+}
+.nav_visual .nav_visual-wrap {
+    max-width: 718px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+    color: white;
+}
+.nav_visual .nav_visual-wrap ul {
+    display: flex;
+    flex-direction: column;
+}
+.nav_visual .nav_visual-wrap ul li.menuItem a {
+    font-size: 7rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+
+/* section */
+    /* secIn */
+    .secIn .title {text-align: center;}
+    .secIn .sectionTitle {font-family: "Noto Sans"; font-weight: 600;}
+.container {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+}
+/* secContac */
+.secContac {height: 48vh; background: var(--main-color); display: flex; justify-content: center; align-items: center;}
+.secContac .sec-wrap {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 4vh;}
+
+.secContac .titBox {margin-bottom: 2.4rem; text-align: center;}
+.secContac .contBox {text-align: center;}
+.secContac .titBox h2 {font: 2.0833vw "Noto Sans"; color: var(--point-color)}
+.secContac .contBox h3 {font: 2.60416vw "Noto Sans"; font-weight: 600; color: var(--point-color)}
+/* footer */
+#footer {
+    position: relative;
+    width: 100%; 
+    height: 26.4814vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background: var(--main-color);
+    border-top: 1px solid #3E3E3F;
+}
+.foot-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topWrap {
+    position: absolute;
+    width: 7.8rem;
+    height: 7.8rem;
+    top: -15%;
+    right: 18.4375%;
+}
+.topWrap a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.topWrap a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/icon/top.svg") no-repeat center / cover;
+}
+
+.foot-left h4 {font-weight: 800; font-size: 2.5rem; color: white; margin-bottom: 1.5rem;}
+.foot-right .copy {color: var(--sub-color1);}
+/* 태블릿 세로(해상도 768px ~ 1023px) */
+@media all and (max-width:1180px){
+    .title {font-size: 3vw; margin-bottom: 1vw;}
+    .sectionTitle {font-size: 5.16145vw; margin-bottom: 2vw;}
+    .content {font-size: 1.34375vw; color: #787878}
+    .footerText {font-size: 1vw; letter-spacing: 11.5%;}
+    #header .nav_pc  {
+        display: none;
+    }
+    #header .nav_other {
+        display: block;
+    }
+    .nav_other.active .nav_visual {
+        left: 0;
+    }
+    .nav_other.active .burger1 {
+        transform: translateY(8px) rotateZ(-135deg);
+    }
+    .nav_other.active .burger2 {
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: 0.35s;
+    }
+    .nav_other.active .burger3 {
+        transform: translateY(-10px) rotateZ(135deg);
+        transform-origin: 50% 50%;
+    }
+    .container {
+        max-width: 80vw;
+    }
+    @media(orientation: Portrait) {
+        
+        .secContac .titBox h2 {font-size: 5.5vw;}
+        .secContac .contBox h3 {font-size: 6vw;}
+        
+        /* footer */
+        
+        .topWrap {width: 5.8rem; height: 5.8rem;}
+    }
+    /* 태블릿 가로 */
+    @media(orientation: Landscape) {
+        .title {font-size: 2vw; margin-bottom: 1vw;}
+        .sectionTitle {font-size: 3vw; margin-bottom: 2vw;}
+        .content {font-size: 1.34375vw; color: #787878}
+        .footerText {font-size: 1vw; letter-spacing: 11.5%;}
+        
+    }
+}
+/* 모바일 가로, 모바일 세로 */
+@media all and (max-width: 915px){
+    .title {font-size: 3.90625vw; margin-bottom: 1vh;}
+    .sectionTitle {font-size: 6.42857vw; margin-bottom: 4vh;}
+    .secsubsubTitle {font-size: 4.6875vw;}
+    .content {font-size: 2.5vw; color: #787878}
+    .footerText {font-size: 1vw; letter-spacing: 11.5%;}
+
+    #header {
+        padding: 3rem 3.2rem;
+    }
+    #header .headInner .logo {
+        width: 4.8rem;
+        height: 3.4rem;
+    }
+    #header .nav_other .hamburgerWrap .burger {
+        width: 2.4rem;
+    }
+    .nav_visual .nav_visual-wrap ul li.menuItem a {
+        font-size: 3rem;
+    }
+    @media(orientation: Portrait) {
+        .secContac {height: 32vh;}
+        .nav_visual .nav_visual-wrap {
+            max-width: 21.6rem;
+            padding: 0;
+        }
+        .foot-wrap {flex-direction: column}
+        
+    }
+    /* 가로모드 */
+    @media(orientation: Landscape) {
+        .title {font-size: 1.2rem; margin-bottom: 3vw;}
+        .sectionTitle {font-size: 2rem; margin-bottom: 2vw;}
+        .secIn .sectionTitle {font-weight: 600;}
+        .content {font-size: 1.1rem; color: #787878}
+        .footerText {font-size: 1vw; letter-spacing: 11.5%;}
+        .nav_visual::before {
+            width: 25vw;
+            height: 13vw;
+        }
+        .nav_visual .nav_visual-wrap ul li.menuItem a {
+            margin-bottom: 0;
+        }
+        .nav_visual .nav_visual-wrap ul {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+         /* footer */
+        #footer {height: 48vh;}
+        .foot-wrap {flex-direction: row; align-items: flex-end;}
+        .topWrap {width: 4.8rem; height: 4.8rem;}
+    }
+}
