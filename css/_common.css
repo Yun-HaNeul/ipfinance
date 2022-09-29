@@ -107,8 +107,14 @@ p, span, h1, h2, h3, h4, h5, h6 {word-break: keep-all;}
     background: white;
     transition: 0.35s ease-in;
 }
+#header.active .nav_other .hamburgerWrap .burger {
+    background: var(--main-color);
+}
 #header .nav_other .hamburgerWrap .burger2 {
     margin-left: -.8rem;
+}
+#header.nav_other.active .hamburgerWrap .burger, #header.active .nav_other.active .hamburgerWrap .burger {
+    background: white;
 }
 .nav_visual {
     position: absolute;
@@ -249,16 +255,18 @@ p, span, h1, h2, h3, h4, h5, h6 {word-break: keep-all;}
         .title {font-size: 2vw; margin-bottom: 1vw;}
         .sectionTitle {font-size: 3vw; margin-bottom: 2vw;}
         .content {font-size: 1.34375vw; color: #787878}
+        .secContac {height: 35vh;}
+        .foot-wrap {align-items: flex-start;}
         .footerText {font-size: 1vw; letter-spacing: 11.5%;}
         
     }
 }
 /* 모바일 가로, 모바일 세로 */
 @media all and (max-width: 915px){
-    .title {font-size: 3.90625vw; margin-bottom: 1vh;}
-    .sectionTitle {font-size: 6.42857vw; margin-bottom: 4vh;}
-    .secsubsubTitle {font-size: 4.6875vw;}
-    .content {font-size: 2.5vw; color: #787878}
+    .title {font-size: 5.90625vw; margin-bottom: 1vh;}
+    .sectionTitle {font-size: 8.42857vw; margin-bottom: 4vh;}
+    .secsubsubTitle {font-size: 2rem;}
+    .content {font-size: 1.3rem; color: #787878}
     .footerText {font-size: 1vw; letter-spacing: 11.5%;}
 
     #header {

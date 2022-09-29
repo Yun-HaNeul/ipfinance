@@ -9,7 +9,7 @@
 
 /* header */
 #header {color: white;}
-
+#header.active {background: white; color: var(--main-color)}
 
 /* main */
 .titleTxt h2 {
@@ -45,7 +45,7 @@
     
 
     @media(orientation: Portrait) {
-        .promise .contentBox ul li.item .descr-wrap h5 {font-size: 3.2552083vw;}
+        .promise .contentBox ul li.item .descr-wrap h5 {font-size: 1.8rem;}
         
     }
     @media(orientation: Landscape) {

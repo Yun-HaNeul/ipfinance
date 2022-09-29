@@ -9,30 +9,28 @@ document.addEventListener("DOMContentLoaded",function(){
         function scrollHandler(){
             let currentsct = document.documentElement.scrollTop;
             if(currentsct > tg1Height){
-                header.style.color = '#222222';
-                tab.forEach(function(item){
-                    item.style.backgroundColor = "#222";
-                })
+                header.classList.add("active");
             }else {
-                header.style.color = '#fff';
-                tab.forEach(function(item){
-                    item.style.backgroundColor = "#fff";
-                })
+                header.classList.remove("active");
             }
         }
-        document.addEventListener('scroll', scrollHandler)
+        document.addEventListener('scroll', scrollHandler);
         
     }
     headerHandler();
     // nav
     function navHandler(){
         const burger = document.querySelector(".hamburgerWrap");
+        const body = document.getElementsByTagName('body')[0];
         function burgerhandler(){
             let tg = this.parentNode;
             if(!tg.classList.contains("active")){
                 tg.classList.add("active");
+                body.style.overflow = 'hidden'
+                
             }else {
                 tg.classList.remove("active");
+                body.style.overflow = 'visible'
             }
         }
         burger.addEventListener("click",burgerhandler);

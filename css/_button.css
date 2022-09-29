@@ -12,6 +12,23 @@
     background: var(--point-color);
     color: white;
 }
+/* 태블릿 */
+@media all and (max-width: 1180px){
+    
+    @media(orientation: Portrait) {
+        
+
+        
+    }
+    /* 가로모드 */
+    @media(orientation: Landscape) {
+        .more a {
+            width: 30%;
+            
+        }
+    }
+}
+
 /* 모바일 */
 @media all and (max-width: 915px){
     

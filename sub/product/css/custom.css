@@ -8,8 +8,10 @@
 @import url(_layout.css);
 
 body {counter-reset: step;}
+
 /* header */
 #header {color: white;}
+#header.active {background: white; color: var(--main-color)}
 
 /* main */
 .titleTxt h2 {
@@ -95,7 +97,7 @@ body {counter-reset: step;}
         .product .product1 .contentBox > ul li.product-item .tit h4 {font-size: 5.20833vw;}
         .product .product1 .titleBox {flex-direction: column; gap: 2rem;}
         .product .product1 .titleBox h3 {font-size: 6.510416vw;}
-        .sec-title p {font-size: 2.60416vw;}
+        .sec-title p {font-size: 1.3rem;}
     }
     @media(orientation: Landscape) {
         .sec-title {margin-bottom: 7rem;}
@@ -112,7 +114,7 @@ body {counter-reset: step;}
     .desc-list .name {width: 4.3rem; height: 2.2rem;}
     .desc-list .name h5 {font-size: 1rem;}
     .desc-list .desc .desc-txt {font-size: 1.1rem;}
-    .service .sec-title h2 {font-size: 1.8rem;}
+    .service .sec-title h2 {font-size: 5.3571vw;}
     .service .contentBox .box p {font-size: 1.5rem;}
     .progress-notice ol li strong {font-size: 1.3rem;}
     .progress .contentBox > ul li .step {margin-top: 1rem;}

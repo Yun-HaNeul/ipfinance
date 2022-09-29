@@ -6,24 +6,41 @@
 .swiper-wrapper:nth-child(2) {
     background-image: url("../img/img/main_bg2.png");
 }*/
+.swiper {
+    margin-left: unset;
+    margin-right: unset;
+}
+.slider-wrapper {
+    position: relative;
+}
+.slider, .slick-slide {height: 100vh;}
+.slider::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 9, 9, 0.4);
+    z-index: -1;
+}
+
 .slidebg {width: 100%; height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; display: flex;align-items: center; }
 .slidebg1 {background-image: url("../img/img/main_bg1.png"); transform: scale(1.5);}
 .slidebg2 {background-image: url("../img/img/main_bg1.png");}
 .slide-utill {
     border: 1px solid white;
 }
-.swiper-loading {
+.slide-loading {
     position: absolute;
     bottom: 11.5vw;
-    width: 60rem;
+    width: 31.25vw;
     z-index: 5;
 }
-.swiper-loading .slide_progress {
+.slide-loading .slide_progress {
     position: relative;
     width: 100%;
     height: 0.7rem;
 }
-.swiper-loading .slide_progress::before {
+.slide-loading .slide_progress::before {
     content: '';
     position: absolute;
     left: 0;
@@ -32,7 +49,7 @@
     height: 100%;
     background: white;
 }
-.swiper-loading .slide_progress::after {
+.slide-loading .slide_progress::after {
     content: '';
     position: absolute;
     left: 0;
@@ -42,18 +59,28 @@
     background: var(--point-color);
 }
 
+.slide-loading .slide_progress.pro-set::after {
+    animation-name: proBar;
+    animation-duration:5s;
+    animation-iteration-count: 1;
+}
+@keyframes proBar{
+    0%{width:0;}
+    100%{width:100%;}
+    }
 /* 태블릿 세로(해상도 768px ~ 1023px) */
 @media all and (max-width:1180px){
     .swiper-loading .slide_progress {
         height: .5rem;
     }
+
     /* 세로모드 */
     @media(orientation: Portrait) {
         .swiper-loading {
             width: 67vw;
             bottom: 44.5vw;
         }
-        
+        .slide-loading {width:51.125vw; bottom: 36.5vh;}
     }
     /* 가로모드 */
     @media(orientation: Landscape) {
