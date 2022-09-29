@@ -1,12 +1,12 @@
 @charset "utf-8";
 @import url(../../../../css/reset.css);
-@import url(../../../..//css/_font.css);
-@import url(../../../../css/_button.css);
-@import url(../../../../css/_common.css);
-@import url(../../../../css/_animation.css);
+@import url(../../../..//css/font.css);
+@import url(../../../../css/button.css);
+@import url(../../../../css/common.css);
+@import url(../../../../css/animation.css);
 
 
-@import url(_layout.css);
+@import url(layout.css);
 
 /* header */
 #header {color: white;}
