@@ -4,7 +4,7 @@
 .slidebg { animation: slideImg 0.85s linear forwards;}
 .txt_box .tit {transform: translateY(10%); opacity: 0; animation: fadeUp 1s 1.2s linear forwards;}
 .txt_box .txt {transform: translateY(10%); opacity: 0; animation: fadeUp 1s 1.5s linear forwards;}
-.swiper-loading .slide_progress {opacity: 0; animation: fadeUp 1s 1.5s linear forwards;}
+.slide-loading .slide_progress {opacity: 0; animation: fadeUp 1s 1.5s linear forwards;}
 
 
 

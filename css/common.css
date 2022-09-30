@@ -267,7 +267,7 @@ p, span, h1, h2, h3, h4, h5, h6 {word-break: keep-all;}
     .sectionTitle {font-size: 8.42857vw; margin-bottom: 4vh;}
     .secsubsubTitle {font-size: 2rem;}
     .content {font-size: 1.3rem; color: #787878}
-    .footerText {font-size: 1vw; letter-spacing: 11.5%;}
+    .footerText {font-size: 1.2rem; letter-spacing: 11.5%;}
 
     #header {
         padding: 3rem 3.2rem;
@@ -288,7 +288,7 @@ p, span, h1, h2, h3, h4, h5, h6 {word-break: keep-all;}
             max-width: 21.6rem;
             padding: 0;
         }
-        .foot-wrap {flex-direction: column}
+        .foot-wrap {flex-direction: column; align-items: flex-start;}
         
     }
     /* 가로모드 */
